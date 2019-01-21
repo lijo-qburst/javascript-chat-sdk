@@ -149,4 +149,6 @@ CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
 | listenerID    | An ID that uniquely identifies that listener. We recommend using the activity or fragment name |
  
 
-To learn more, please refer to our <a href="https://prodocs.cometchat.com/docs/js-quick-start">javascript Developer Documentation</a>.
+# Learn More
+
+To learn more, please refer to our <a href="https://prodocs.cometchat.com/docs/js-quick-start">Javascript Developer Documentation</a>.
