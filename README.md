@@ -1,8 +1,9 @@
 <div style="width:100%">
 	<div style="width:50%; display:inline-block">
-		<h1> CometChat Pro</h1> 		
+		<h2> CometChat Pro</h2> 		
 	</div>	
 </div>
+<h1>Quick Start</h1>
 This guide demonstrates how to add chat to a Javascript application using CometChat. Before you begin, we strongly recommend you read the <a href="https://prodocs.cometchat.com/docs/concepts" target="_blank">Key Concepts</a> guide.
 <table>
   <tr>
@@ -27,7 +28,7 @@ This guide demonstrates how to add chat to a Javascript application using CometC
 
 
 
-### Get your Application Keys
+## Get your Application Keys
 
 <a href="https://app.cometchat.com" target="_blank">Signup for CometChat</a> and then:
 
@@ -41,7 +42,7 @@ This guide demonstrates how to add chat to a Javascript application using CometC
   * Node.js
 
 
-# Add the CometChat Dependency
+## Add the CometChat Dependency
 
 You can add the CometChat to your project using  `<script>` tag or `npm`.
 
@@ -60,7 +61,7 @@ You can add the CometChat to your project using  `<script>` tag or `npm`.
 >if you are using npm to import CometChat,use : 
 >`import { CometChat } from "@cometchat-pro/chat"`
 
-# Initialize CometChat
+## Initialize CometChat
 The `init()` method initializes the settings required for `CometChat`.
 
 You need to call `init()` before calling any other method from CometChat.
@@ -81,7 +82,7 @@ CometChat.init(appID).then(
 ```
 Make sure you replace the `APP_ID` with your CometChat **App ID** in the above code.
 
-# Login your user
+## Login your user
 Once initialization is successful, you will need to log the user into CometChat using the login() method.
 
 We recommend you call the CometChat login method once your user logs into your app.
@@ -108,7 +109,7 @@ Make sure you replace the `API_KEY` with your `CometChat` **API Key** in the abo
 
 The `login()` method returns the User object on `Promise` resolved containing all the information of the logged in user.
 
-# Send a message
+## Send a message
 Once your user has logged in, you can send a message using the `sendMessage()` method.
 ```Javascript
 var receiverID = "SUPERHERO2";
@@ -129,9 +130,16 @@ CometChat.sendMessage(textMessage).then(
   }
 );
 ```
-Once the message is sent successfully, you will receive the message information as `TextMessage` object on `Promise` resolved.
+| **Parameter** | **Description**                                                                                                                                 |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| receiverID    | The UID or GUID of the recipient                                                                                                                |
+| messageText   | The message string to be sent                                                                                                                   |
+| messageType   | The type of the message that needs to be sent which in this case is `CometChat.MESSAGE_TYPE.TEXT` (text)                                        |
+| receiverType  | The type of the receiver to whom the message is to be sent i.e `CometChat.RECEIVER_TYPE.USER` (user) or `CometChat.RECEIVER_TYPE.GROUP` (group) |
 
-# Receive Messages
+Once the message is sent successfully, you will receive the message information as <a href="https://prodocs.cometchat.com/docs/js-appendix#section-textmessage">`TextMessage` </a> object on `Promise` resolved.
+
+## Receive Messages
 You can add multiple MessageListener using the `addMessageListener()` method, to receive incoming message wherever you need.
 
 ```Javascript 
@@ -143,5 +151,8 @@ CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
   }
 }));
 ```
+| **Parameter** | **Description**                                                                                |
+|---------------|------------------------------------------------------------------------------------------------|
+| listenerID    | An ID that uniquely identifies that listener. We recommend using the activity or fragment name |
  <a href="https://docs.pro.cometchat.com/docs/">Learn more</a>
 
