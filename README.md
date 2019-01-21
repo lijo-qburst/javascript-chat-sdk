@@ -3,7 +3,30 @@
 		<h1> CometChat Pro</h1> 		
 	</div>	
 </div>
-This guide demonstrates how to add chat to a Javascript application using CometChat. Before you begin, we strongly recommend you read the Key Concepts guide.
+This guide demonstrates how to add chat to a Javascript application using CometChat. Before you begin, we strongly recommend you read the <a href="https://prodocs.cometchat.com/docs/concepts" target="_blank">Key Concepts</a> guide.
+
+<table>
+  <tr>
+    <th><strong>I want to integrate with my app</strong></th>
+    <th><strong>I want to explore a sample app</strong></th>
+  </tr>
+  <tr>
+    <td>
+      <ol>
+        <li><a href="#Get-your-application-keys">Get your application keys</a></li>
+        <li><a href="#add-the-cometchat-dependency">Add the CometChat dependency</a></li>
+        <li><a href="#initialize-cometchat">Initialize CometChat</a></li>
+        <li><a href="#login-your-user">Login your user</a></li>
+        <li><a href="#send-a-message">Send a message</a></li>
+        <li> <a href="#recive-message">Receive messages</a></li>
+      </ol>
+    </td>
+    <td style="text-align:center;"  rowspan="6">Clone/download project. Follow the steps mentioned in the README.md file and run the app.<br><a class="button btn btn-primary" href="https://github.com/cometchat-pro/javascript-reactjs-chat-app/archive/master.zip">Download sample app</a></td>
+  </tr>  
+</table>
+
+
+
 
 ### Get your Application Keys
 
@@ -31,11 +54,11 @@ You can add the CometChat to your project using  `<script>` tag or `npm`.
 ```
 `NPM`
 ```Javascript
-  npm install @cometchat-pulse/cometchat-pulse.js --save
+  npm install @cometchat-pro/chat --save
 ```
 >If you are using HTML, then a window scope variable called `CometChat` is created.
 >if you are using npm to import CometChat,use : 
->`import { CometChat } from "@cometchat-pulse/cometchat-pulse.js"`
+>`import { CometChat } from "@cometchat-pro/chat"`
 
 # Initialize CometChat
 The `init()` method initializes the settings required for `CometChat`.
@@ -43,7 +66,7 @@ The `init()` method initializes the settings required for `CometChat`.
 You need to call `init()` before calling any other method from CometChat.
 
 ```Javascript
-import { CometChat } from "@cometchat-pulse/cometchat-pulse.js";
+import { CometChat } from "@cometchat-pro/chat";
 
 var appID = "APP_ID";
 
@@ -65,7 +88,7 @@ Once initialization is successful, you will need to log the user into CometChat 
 
 We recommend you call the CometChat login method once your user logs into your app.
 ```Javascript
-import { CometChat } from "@cometchat-pulse/cometchat-pulse.js";
+import { CometChat } from "@cometchat-pro/chat";
 
 var UID = "SUPERHERO1";
 var apiKey = "API_KEY";
@@ -91,7 +114,7 @@ The `login()` method returns the User object on `Promise` resolved containing al
 # Send a message
 Once your user has logged in, you can send a message using the `sendMessage()` method.
 ```Javascript
-import { CometChat } from "@cometchat-pulse/cometchat-pulse.js";
+import { CometChat } from "@cometchat-pro/chat";
 
 var receiverID = "SUPERHERO2";
 var messageText = "Hello";
@@ -117,7 +140,7 @@ Once the message is sent successfully, you will receive the message information 
 You can add multiple MessageListener using the `addMessageListener()` method, to receive incoming message wherever you need.
 
 ```Javascript 
-import { CometChat } from "@cometchat-pulse/cometchat-pulse.js";
+import { CometChat } from "@cometchat-pro/chat";
 
 var listenerID = "UNIQUE_LISTENER_ID";
 CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
@@ -127,5 +150,5 @@ CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
   }
 }));
 ```
-Learn more about <a href="https://docs.pulse.cometchat.com/docs/">CometChat</a>
+Learn more about <a href="https://docs.pro.cometchat.com/docs/">CometChat</a>
 
