@@ -1,65 +1,58 @@
 <div style="width:100%">
+<div style="width:100%">
 	<div style="width:50%; display:inline-block">
-		<h2> CometChat Pro</h2> 		
+		<p align="center">
+		<img style="text-align:center" width="180" height="180" alt="" src="https://raw.githubusercontent.com/cometchat-pro/ios-swift-chat-app/master/Screenshots/CometChat%20Logo.png">	
+		</p>	
 	</div>	
 </div>
-<h1>Quick Start</h1>
+</br>
+</br>
+</div>
+
+CometChat Pro enables you to add voice, video & text chat for your website & app.
+
+[![Platform](https://img.shields.io/badge/Platform-Javascript-blue.svg)](#)
+[![Platform](https://img.shields.io/badge/Platform-NPM-orange.svg)](#)
+
+# Quick Start
+
 This guide demonstrates how to add chat to a Javascript application using CometChat. Before you begin, we strongly recommend you read the <a href="https://prodocs.cometchat.com/docs/concepts" target="_blank">Key Concepts</a> guide.
-<table>
-  <tr>
-    <th><strong>I want to integrate with my app</strong></th>
-    <th><strong>I want to explore a sample app</strong></th>
-  </tr>
-  <tr>
-    <td>
-      <ol>
-        <li><a href="#Get-your-application-keys">Get your application keys</a></li>
-        <li><a href="#add-the-cometchat-dependency">Add the CometChat dependency</a></li>
-        <li><a href="#initialize-cometchat">Initialize CometChat</a></li>
-        <li><a href="#login-your-user">Login your user</a></li>
-        <li><a href="#send-a-message">Send a message</a></li>
-        <li> <a href="#receive-messages">Receive messages</a></li>
-      </ol>
-    </td>
-    <td style="text-align:center;"  rowspan="6">Clone/download project. Follow the steps mentioned in the README.md file and run the app.<br><a class="button btn btn-primary" href="https://github.com/cometchat-pro/javascript-reactjs-chat-app/archive/master.zip">Download sample app</a></td>
-  </tr>  
-</table>
-
-
-
 
 ## Get your Application Keys
 
 <a href="https://app.cometchat.com" target="_blank">Signup for CometChat</a> and then:
 
 1. Create a new app: Enter a name & hit the **+** button
-2. Head over to the **API Keys** section and click on the **Create API Key ** button
+2. Head over to the **API Keys** section and click on the **Create API Key** button
 3. Enter a name and select the scope as **Auth Only**
 4. Now note the **API Key** and **App ID**
 
-### CometChat can be integrated with:
-  * Web (Browser)
-  * Node.js
-
-
 ## Add the CometChat Dependency
 
-You can add the CometChat to your project using  `<script>` tag or `npm`.
+### NPM
+First, install via npm
 
-`HTML`
-```Javascript
-     <!--Copy and paste the code snippet into your application HTML. The code snippet should look like this:-->
-     <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat/CometChat.js"></script>     
+`Shell`
+
+```shell
+npm install @cometchat-pro/chat --save
 ```
 
-`NPM`
-```Javascript
-  npm install @cometchat-pro/chat --save
-```
+Then, import the `CometChat` object wherever you want to use CometChat
 
->If you are using HTML, then a window scope variable called `CometChat` is created.
->if you are using npm to import CometChat,use : 
->`import { CometChat } from "@cometchat-pro/chat"`
+`JavaScript`
+
+```Javascript 
+  import { CometChat } from "@cometchat-pro/chat" 
+```
+### HTML (via CDN)
+Include the CometChat Javascript library in your HTML code
+
+
+```HTML
+     <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat/CometChat.js"></script>
+```
 
 ## Initialize CometChat
 The `init()` method initializes the settings required for `CometChat`.
@@ -156,4 +149,4 @@ CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
 | listenerID    | An ID that uniquely identifies that listener. We recommend using the activity or fragment name |
  
 
-<a href="https://docs.pro.cometchat.com/docs/">Learn more</a>
+To learn more, please refer to our <a href="https://prodocs.cometchat.com/docs/js-quick-start">javascript Developer Documentation</a>.
