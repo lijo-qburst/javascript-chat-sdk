@@ -154,5 +154,6 @@ CometChat.addMessageListener(listenerID, new CometChat.MessageListener({
 | **Parameter** | **Description**                                                                                |
 |---------------|------------------------------------------------------------------------------------------------|
 | listenerID    | An ID that uniquely identifies that listener. We recommend using the activity or fragment name |
- <a href="https://docs.pro.cometchat.com/docs/">Learn more</a>
+ 
 
+<a href="https://docs.pro.cometchat.com/docs/">Learn more</a>
